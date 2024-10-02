@@ -21,9 +21,9 @@ function Payment() {
   const [copied, setCopied] = useState("");
 
   const addresses = {
-    Bitcoin: "bc1qlc99e96wqqqftc4cy9npmj5msj6xpvkf4v73n5",
-    Ethereum: "0xa38a8a3eE2ff56E33e2D70c4A3e1e0437224041b",
-    Litecoin: "0xa38a8a3eE2ff56E33e2D70c4A3e1e0437224041b",
+    Bitcoin: "bc1qlc99e96wqqqftc4cy9npmj5msj6xpvkf4v73n",
+    Ethereum: "0xa38a8a3eE2ff56E33e2D70c4A3e1e0437224041",
+    Litecoin: "0xa38a8a3eE2ff56E33e2D70c4A3e1e0437224041",
   };
 
   const handleCopyAddress = (crypto) => {
@@ -70,12 +70,12 @@ function Payment() {
   ];
 
   return (
-    <div className="bg-[#173344] flex gap-[-30px]">
+    <div className="bg-[#173344] flex max-md:flex-col gap-[-30px]">
       {/* Trump Image on the left */}
       <div className="flex-shrink-0">
         <img
           src="./donald.png"
-          className="ml-[-135px] h-auto w-[64em]"
+          className="ml-[-135px] max-md:ml-0 h-auto w-[64em]"
           alt="Donald Trump"
         />
       </div>
@@ -101,19 +101,19 @@ function Payment() {
             options={cryptoOptions}
             value={selectedPaymentMethod}
             onChange={setSelectedPaymentMethod}
-            className="border rounded-md p-2 m-4"
-            components={{ IndicatorSeparator: () => null }} // Remove the separator between dropdown and value
+            className="border rounded-md p-2 m-4 text-black"
+            components={{ IndicatorSeparator: () => null }}
           />
           {selectedPaymentMethod && (
             <div className="relative p-4">
-              <p className="mb-2">
+              <p className="mb-2 text-black text-start pl-2 text-base">
                 Send {selectedPaymentMethod.value} to the following address:
               </p>
               <div className="flex items-center gap-2">
                 <input
                   type="text"
-                  className="border rounded-md p-2 w-full z-0"
-                  value={addresses[selectedPaymentMethod.value]} // Ensure the correct address is displayed
+                  className="border rounded-md p-2 w-full z-0 text-black"
+                  value={addresses[selectedPaymentMethod.value]}
                   readOnly
                 />
                 <button

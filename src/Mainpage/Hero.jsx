@@ -1,7 +1,7 @@
 import Payment from "./pay/Payment";
 function Hero() {
   return (
-    <section className="h-screen text-center bg-gradient-to-r from-[#051e2e] via-[#093C5E] to-[#051e2e] montserrat pt-40">
+    <section className="h-screen text-center bg-gradient-to-r from-[#051e2e] via-[#093C5E] to-[#051e2e] montserrat pt-40 max-md:pt-32">
       <div className="flex flex-col items-center justify-center ">
         {" "}
         {/* Optional background color */}
@@ -23,20 +23,20 @@ function Hero() {
         <div>
           <img src="./trades.png" alt="" />
         </div>
-        <div className="flex gap-14 pt-10">
-          <button className="py-4 px-14 rounded-full gap-2 text-red-500 bg-white flex">
+        <div className="flex max-md:flex-col gap-14 max-md:gap-7 pt-10 max-md:pb-12">
+          <button className="py-4 px-14 rounded-full gap-2 text-red-500 bg-white flex max-md:px-32 max-md:py-3">
             COINBASE{" "}
             <span>
               <img src="./coinbase.png" className="h-5 w-5" alt="" />
             </span>
           </button>
-          <button className="py-4 px-14 rounded-full gap-2 bg-transparent hover:bg-white flex border-[1px] border-white">
+          <button className="py-4 px-14 rounded-full gap-2 bg-transparent hover:bg-white hover:text-red-500 flex border-[1px] border-white max-md:px-32 max-md:py-3">
             GEMINI
             <span>
               <img src="./gemini.png" className="h-5 w-5" alt="" />
             </span>
           </button>
-          <button className="py-4 px-14 rounded-full gap-2 bg-transparent hover:bg-white flex border-[1px] border-white">
+          <button className="py-4 px-14 rounded-full gap-2 bg-transparent hover:bg-white hover:text-red-500 flex border-[1px] border-white max-md:px-32 max-md:py-3">
             ANEDOT
             <span>
               <img src="./anedot.png" className="h-5 w-5" alt="" />
