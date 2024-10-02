@@ -32,7 +32,7 @@ function Footer() {
       <div>
         <p>Paid for by Donald J Trump for President 2024, Inc.</p>
       </div>
-      <div className="flex space-x-4 max-md:space-x-2 max-md:text-xs">
+      <div className="flex gap-4 max-md:gap-2 max-md:text-center">
         <a href="/privacy-policy" className="hover:underline">
           Privacy Policy
         </a>
