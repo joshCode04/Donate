@@ -21,9 +21,9 @@ function Payment() {
   const [copied, setCopied] = useState("");
 
   const addresses = {
-    Bitcoin: "bc1qlc99e96wqqqftc4cy9npmj5msj6xpvkf4v73n",
-    Ethereum: "0xa38a8a3eE2ff56E33e2D70c4A3e1e0437224041",
-    Litecoin: "0xa38a8a3eE2ff56E33e2D70c4A3e1e0437224041",
+    Bitcoin: "bc1q26xdk0merragvcuuww8ghafes8tqqnxh8mg0d9",
+    Ethereum: "0xB1DE3D7F74aa03F3d936556d0e3538a8C19A1de3",
+    USDT: "THLMrfWfy25w9iNdJ6n8hoRsJBK6dEAU63",
   };
 
   const handleCopyAddress = (crypto) => {
@@ -59,7 +59,7 @@ function Payment() {
       ),
     },
     {
-      value: "Litecoin",
+      value: "USDT", // Changed from "Litecoin" to "USDT"
       label: (
         <div className="flex items-center">
           <img src="/USDT.png" alt="USDT Logo" className="w-6 h-6 mr-2" />
@@ -148,7 +148,7 @@ function Payment() {
                     selectedOption === "gpay" ? "border-2 border-blue-500" : ""
                   }`}
                 >
-                  <img src="/Gpay.png" alt="Google Pay" className="w-16 h-7" />
+                  <img src="/Gpay.jpg" alt="Google Pay" className="w-16 h-7" />
                 </div>
               </div>
               {copied === selectedPaymentMethod.value && (
